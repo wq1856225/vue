@@ -1,0 +1,122 @@
+$w:300px;
+$h:300px;
+$bw:2px;
+$color:#000;
+$m:(flex-start,center,flex-end);
+.rad{
+	width:$w/6;
+	height:$h/6;
+	background:$color;
+	border-radius: 50%;
+}
+@for $i from 1 through 9{
+	
+.d#{$i}{
+	width: 300px;
+	height: 300px;
+	background: red;
+	display: flex;
+    flex-flow: column wrap;
+    margin-top: 20px;
+    @if $i==1{
+    	justify-content: center;
+    	align-items: center;
+    	@for $j from 1 through $i{
+
+    		.ds#{$j}{
+    			@extend .rad;
+
+    		}
+    	} 
+    }
+    @else if $i==2{
+    	justify-content: space-between;
+    	align-items: center;
+    	
+    	@for $j from 1 through $i{
+
+    		.ds#{$j}{
+    			@extend .rad;
+
+    		}
+    	} 
+
+    }
+    @else if $i==3{
+    	justify-content: space-between;
+    	@for $j from 1 through $i{
+
+    		.ds#{$j}{
+    			@extend .rad;
+    			align-self: nth($m,$j)
+
+    		}
+    	} 
+    }
+    @else if $i % 2==0 and $i!=2 {
+    	justify-content:flex-start;
+    	align-content: space-around;
+    	
+    	@for $j from 1 through $i/2{
+    		.col-#{$j}{
+    			@extend .rad;
+        
+    		}
+
+    	}
+    }
+
+    @else if $i % 2==1 and $i!=1 and $i!=3{
+    	justify-content:flex-start;
+    	align-content: space-around;
+    
+    	@for $v from 1 through 3{
+            .col-#{$v}{
+                @extend .rad
+
+            }
+        }
+
+    }
+
+    @if $i==5{
+    .zj{
+        @extend  .col;
+        .zj-1{
+            @extend .rad;
+            align-self: center;
+        }
+
+         
+    }
+}
+@if $i==7{
+    .zj{
+        @extend .col;
+        justify-content: flex-start !important;
+
+        .zj-1{
+            @extend .rad;
+
+
+        }
+    }
+}
+@if $i==9{
+    @for $i from 1 through 3{
+    .col-#{$i}{
+        @extend .rad;
+    }
+}
+}
+    
+    }
+}
+
+.col{
+            flex-basis: 100%;
+            display:flex;
+            flex-flow:column wrap;
+            justify-content: space-around;
+}
+

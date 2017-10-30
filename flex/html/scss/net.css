@@ -1,0 +1,224 @@
+.g {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-flow: row wrap;
+  border: 2px solid red;
+  justify-content: flex-start;
+  align-content: space-between; }
+  .g .g1 {
+    flex-basis: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    height: 50px; }
+    .g .g1 .g-1 {
+      height: 50px;
+      background: red;
+      margin-left: 10px;
+      margin-right: 10px;
+      flex: 1; }
+    .g .g1 .g-2 {
+      height: 50px;
+      background: red;
+      margin-left: 10px;
+      margin-right: 10px;
+      flex: 1; }
+  .g .g2 {
+    flex-basis: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    height: 50px; }
+    .g .g2 .g-1 {
+      height: 50px;
+      background: red;
+      margin-left: 10px;
+      margin-right: 10px;
+      flex: 1; }
+    .g .g2 .g-2 {
+      height: 50px;
+      background: red;
+      margin-left: 10px;
+      margin-right: 10px;
+      flex: 1; }
+    .g .g2 .g-3 {
+      height: 50px;
+      background: red;
+      margin-left: 10px;
+      margin-right: 10px;
+      flex: 1; }
+  .g .g3 {
+    flex-basis: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    height: 50px; }
+    .g .g3 .g-1 {
+      height: 50px;
+      background: red;
+      margin-left: 10px;
+      margin-right: 10px;
+      flex: 1; }
+    .g .g3 .g-2 {
+      height: 50px;
+      background: red;
+      margin-left: 10px;
+      margin-right: 10px;
+      flex: 1; }
+    .g .g3 .g-3 {
+      height: 50px;
+      background: red;
+      margin-left: 10px;
+      margin-right: 10px;
+      flex: 1; }
+    .g .g3 .g-4 {
+      height: 50px;
+      background: red;
+      margin-left: 10px;
+      margin-right: 10px;
+      flex: 1; }
+  .g .g4 {
+    flex-basis: 100%;
+    display: flex;
+    height: 100px;
+    flex-flow: row nowrap;
+    justify-content: space-between; }
+    .g .g4 .g-1 {
+      height: 100px;
+      background: black;
+      margin-left: 10px;
+      margin-right: 10px;
+      flex: 1; }
+    .g .g4 .g-2 {
+      height: 100px;
+      background: black;
+      margin-left: 10px;
+      margin-right: 10px;
+      flex: 1; }
+
+.d {
+  width: 300px;
+  height: 301px;
+  display: flex;
+  flex-flow: row wrap;
+  border: 2px solid orange;
+  justify-content: flex-start;
+  align-content: space-around; }
+  .d .d1 {
+    flex-basis: 100%;
+    display: flex;
+    height: 50px;
+    flex-flow: row nowrap;
+    justify-content: space-around; }
+  .d .d2 {
+    flex-basis: 100%;
+    display: flex;
+    height: 50px;
+    flex-flow: row nowrap;
+    justify-content: space-around; }
+  .d .d3 {
+    flex-basis: 100%;
+    display: flex;
+    height: 50px;
+    flex-flow: row nowrap;
+    justify-content: space-around; }
+  .d .d-1 {
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 1;
+    background: red; }
+  .d .d-2 {
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 1;
+    background: red; }
+  .d .d-3 {
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 1;
+    background: red; }
+  .d .d-4 {
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 1;
+    background: red; }
+  .d .d-5 {
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 1;
+    background: red; }
+  .d .d-6 {
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 1;
+    background: red; }
+  .d .d-7 {
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 1;
+    background: red; }
+  .d .d-8 {
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 1;
+    background: red; }
+
+.cl {
+  flex: 0 0 50% !important; }
+
+.dl {
+  flex: 0 0 33% !important; }
+
+.bl {
+  flex: 0 0 25% !important; }
+
+.al {
+  flex: 0 0 33%; }
+
+.sb {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start; }
+  .sb .he {
+    flex: 0 0 10%;
+    background: green; }
+  .sb .fe {
+    flex: 0 0 10%;
+    background: green; }
+  .sb .main {
+    flex: 1;
+    display: flex;
+    flex-flow: row nowrap; }
+    .sb .main .c-1 {
+      flex: 0 0 20%;
+      background: red;
+      order: 0; }
+    .sb .main .c-2 {
+      flex: 1;
+      background: #deff00;
+      order: -1; }
+    .sb .main .c-3 {
+      flex: 0 0 20%;
+      background: #d3d3d3;
+      order: -2; }
+
+@media screen and (max-width: 768px) {
+  .mian {
+    display: flex;
+    flex: 1 !important; }
+
+  .c-1, .c-2, .c-3 {
+    flex: auto !important; } }
+
+/*# sourceMappingURL=net.css.map */

@@ -1,0 +1,112 @@
+$w:300px;
+$bw:2px;
+$color:(red,orange,yellow);
+*{
+	margin:0;
+	padding: 0;
+}
+.sb{
+	display: flex;
+	flex:{
+		flow:column wrap;
+	}
+	justify-content:space-between;
+	width: 300px;
+	height:$w;
+	border:$bw solid red;
+	.head,.footer{
+		flex:0 0 25%;
+		background:green;
+	}
+	.main{
+		flex:1;
+		display:flex;
+		flex-flow:row nowrap;
+		justify-content:space-between;
+		@for $v from 1 through 3{
+			.c#{$v}{
+				@if $v==1 or $v==3{
+					flex:0 0 25%;
+					background: nth($color,$v);
+				}
+				@else{
+					flex:1;
+					background:nth($color,$v);
+				}
+			}
+		}
+	}
+}
+.iput{
+	width:$w*2;
+	height:$w*2;
+	display:flex;
+	flex-flow:row wrap;
+	justify-content: space-between;
+	align-content: space-around;
+	@for $i from 1 through 5{
+		.d#{$i}{
+			flex :0 0 100%;
+			display:flex;
+			flex-flow:row wrap;
+			justify-content:space-around;
+			.row{
+				
+				//height:50px;
+
+				display:flex;
+				flex-flow:row nowrap;
+				justify-content: flex-start;
+				p{
+					
+					
+					text-align: center;
+					background:#d3d3de
+				}
+
+			}
+		}
+	}
+}
+.sp{
+	width:$w*2;
+	height:$w;
+	background:#dedede;
+	border-radius:5px;
+	display:flex;
+	flex-flow:column wrap;
+	justify-content:flex-start;
+	align-content:space-around;
+	@for $i from 1 through 2{
+		.col#{$i}{
+			flex:0 0 100%;
+			display:flex;
+			flex-flow:column wrap;
+			justify-content:space-between;
+			.ip{
+				flex:0 0 80%;
+				display:flex;
+				flex-flow:column wrap;
+				justify-content:space-around;
+			}
+			@for $v from 1 through 3{
+				.ip-#{$v}{
+					flex-basis:15%;
+
+					display:flex;
+					flex-flow:row nowrap;
+					justify-content:flex-start;
+					p{
+						line-height: 30px;
+						background:#d3d3de;
+					}
+					input{
+						
+					}
+
+					
+									}
+			}
+		}
+	}
+}

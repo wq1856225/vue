@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../../../web/node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<button @click.ctrl="bt">bt</button>
+		<button @click.ctrl.extact="ct">extact</button>
+		<div :style="d"  @click.right.prevent="rg"></div>
+	</div>
+	<script type="text/javascript">
+		var vm=new Vue({
+			el:"#app",
+			data:{
+				d:{
+					width:"200px",
+					height:"200px",
+					background: "red"
+				}
+			},
+			methods:{
+				bt(e){
+					alert("hello")
+				},
+				ct(){
+					alert("wangqi")
+				},
+				hel(){
+					this.d.background="green";
+				},
+				rg(e){
+
+					this.d.background="black"
+				}
+			}
+		})
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,69 @@
+.db {
+  width: 100%;
+  height: 700px;
+  background: #dedede;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between; }
+  .db .hd {
+    flex: 0 0 10%;
+    display: flex;
+    flex-flow: row nowrap;
+    background: green;
+    justify-content: space-between; }
+    .db .hd .content {
+      margin-left: 10px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center; }
+      .db .hd .content p {
+        margin-left: 10px; }
+    .db .hd .content1 {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      align-items: center; }
+      .db .hd .content1 .c1 {
+        background: red;
+        margin-right: 10px; }
+      .db .hd .content1 .c2 {
+        background: orange; }
+  .db .fe {
+    flex: 0 0 10%;
+    display: flex;
+    flex-flow: row nowrap;
+    background: #000;
+    justify-content: flex-start; }
+    .db .fe ul {
+      flex: 0 0 100%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center; }
+      .db .fe ul li {
+        background: #fff;
+        margin-left: 10px; }
+  .db .main {
+    flex: 1;
+    display: flex;
+    background: #fff;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center; }
+    .db .main h1 {
+      margin-top: 10px;
+      margin-bottom: 10px; }
+    .db .main .cl {
+      background: #d3d3d3;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-start; }
+      .db .main .cl button {
+        width: 50px; }
+
+/*# sourceMappingURL=d.css.map */

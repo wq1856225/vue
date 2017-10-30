@@ -13,3 +13,76 @@
 <input type="text" v-model="val" >
 <p>{{val}}</p>
 ```
+### 多行文本
+```
+<span>多行文本</span>
+<p style="white-space:pre-line">{te}</p>
+<texta v-model="te"></texta>
+```
+>在文本区域插值 (\<textarea>\</textarea>) 并不会生效，应用 v-model 来代替。
+
+ * white-space 属性设置如何处理元素内的空白
+
+ ![white-space](../flex/img/white.png)
+
+* normal空白被浏览忽略
+* pre 类似\<pre>
+* nowrap 不会换行
+* pre-wrap保留空白字符序列，正常进行换行
+* pre-line 合并空白字符
+
+
+复选框
+```
+<input type="radio" v-model="checked">
+<span>{{checked}}</span>
+```
+```
+<div id="app">
+<input type="text" value="jack" v-model="my">
+<label>Jack</label>
+<input type="text" value="Wangqi" v-model="my">
+<label>Wangqi</label>
+<input type="text" value="Wd" v-model="my">
+<label>jiDong</label>
+
+</div>
+var vm=new Vue({
+  el:"#app",
+  data:{
+    my:[];
+  },
+
+  })
+  每当他选择一个复选框就把其的value添加到my数组里去，去掉复选的勾my数组减去相应的值
+```
+### 单选框
+```
+<div id="example-4">
+  <input type="radio" id="one" value="One" v-model="picked">
+  <label for="one">One</label>
+  <br>
+  <input type="radio" id="two" value="Two" v-model="picked">
+  <label for="two">Two</label>
+  <br>
+  <span>Picked: {{ picked }}</span>
+</div>
+
+var vm=new Vue({
+  el:"#example-4",
+  data:{
+    picked:""
+  }
+  })
+```
+
+### 选择列表
+```html
+<div id="app">
+<select v-model="ss">
+<option disable value="" >请选择</option>
+<option>1</option
+<option>2</option>
+</select>
+</div>
+```
